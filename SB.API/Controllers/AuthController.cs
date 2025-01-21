@@ -19,7 +19,7 @@ namespace SB.API.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserEntity user)
         {
-            if (user.Username == "admin" && user.Password == "password")
+            if (user.Username == "usuario" && user.Password == "contrasenia123")
             {
                 var token = _jwtService.GenerateToken(user.Username);
                 return Ok(new { Token = token });
